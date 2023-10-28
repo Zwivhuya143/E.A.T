@@ -1,0 +1,79 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+    <head>
+        <link rel="stylesheet" href="{% static 'css/menu.css' %}">
+        <title></title>
+    </head>
+    <section id="page-header" class="blog-header">
+
+        <h2 style="color: white">
+            <i class="fa fa-list-ol" aria-hidden="true"></i>
+            Order Details
+        </h2>
+    </section>
+    <section id="blog" style="min-height: 650px">
+        <div id="cart" class="blog-container">
+            <div class="blog-box">
+                <div style="margin-top: 20px">
+                    <table width="100%">
+                        <thead>
+                            <tr>
+                                <td>Product</td>
+                                <td>Price</td>
+                                <td>Quantity</td>
+                                <td>Subtotal</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for item in order_items %}
+                            <tr>
+                                <td>{{item.product.name}}</td>
+                                <td>R{{item.product.price}}</td>
+                                <td>{{item.quantity}}</td>
+                                <td>R{% widthratio item.product.price 1 item.quantity %}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <footer class="section-p1">
+        <div class="col">
+            E.A.T
+        </div>
+        <div class="col">
+            <h4>Contact</h4>
+            <p><strong>Address:</strong> 143 Bree Street, Cape Town.</p>
+            <p><strong>Phone:</strong> +01 2222 365 </p>
+            <div class="icon">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+            </div>
+        </div>
+        <div class="col">
+            <h4>Operating Hours</h4>
+            <p>Mon - Fri: 11:00am - 10:00pm</p>
+            <p>Sat - Sun: 11:00am - 12:00pm
+            <p>
+        </div>
+        <div class="col">
+            <h4>Join our family</h4>
+            <p>Subscribe to our newsletter for updates and deals</p>
+            <section>
+                <form action="">
+                    <input type="text" name="" id="" placeholder="Email Address">
+                    <button>Subscribe</button>
+                </form>
+            </section>
+        </div>
+
+        <div class="copyright">
+            <p>Copyright &copy;2023 Designed by <span class="designer"></span>Code Buds</p>
+        </div>
+    </footer>
+{% endblock content%}

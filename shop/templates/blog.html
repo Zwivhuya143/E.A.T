@@ -1,0 +1,130 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blog Section</title>
+
+        <!--stylesheet -------------->
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}"/>
+
+        <!--poppins ----------------->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel = "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+    <section id="page-header" class="blog-header">
+
+        <h2 style="color: white">
+            <i class="fa fa-rss" aria-hidden="true"></i>
+            Blog Post</h2>
+        <p style="color: #d4af37">Step into our culinary haven, where weпереte a symphony of flavors, where we craft culinary experiences that will captivate your soul.</p>
+    </section>
+    <!--Blog Section ------------>
+    <section id="blog">
+
+        <!--blog-container-------->
+        <div class="blog-container">
+            <!--box 1 ------------>
+            <div class="blog-box">
+                <!--image------------->
+                <div class="blog-img">
+                    <img src="../static/img/pic1.jpg" alt="E.A.T Image 1">
+                </div>
+                <!--text-------------->
+                <div class="blog-text">
+                    <!--<span> October 2023 / Blog Post</span>-->
+                    <a href = "#" class = "blog-title">The Culinary Symphony: A Journey Through Flavors</a>
+                    <p>
+                        In the realm of gastronomy, where taste buds meet artistry, a symphony of flavors awaits. Embark on a culinary journey that transcends mere sustenance, transforming meals into captivating experiences.
+
+                        Imagine a canvas painted with vibrant hues, where each ingredient plays a harmonious note, blending seamlessly to create a masterpiece of taste. From the subtle sweetness of caramelized onions to the zesty tang of citrus, each flavor adds its unique melody to the composition.
+
+                        As we delve into the symphony of flavors, let us explore the symphony of senses. The aroma of freshly baked bread wafting through the air, the vibrant colors of a carefully curated salad, the delicate textures of a melt-in-your-mouth dessert – these sensory delights elevate the dining experience.
+                    </p>
+                    <a href="#">Read More</a>
+                </div>
+            </div>
+
+            <!--box 2 ------------>
+            <div class="blog-box">
+                <!--image------------->
+                <div class="blog-img">
+                    <img src="../static/img/pic2.jpg" alt="E.A.T Image 2">
+                </div>
+                <!--text-------------->
+                <div class="blog-text">
+                    <!--<span> October 2023 / Blog Post</span> -->
+                    <a href = "#" class = "blog-title"> Culinary Adventures: Exploring Global Cuisines </a>
+                    <p>
+                        Embark on a culinary adventure that spans the globe, taking your taste buds on an expedition of diverse flavors and culinary traditions. From the aromatic spices of the East to the rustic charm of Mediterranean cuisine, let's explore the world through its tantalizing cuisines.
+
+                        Imagine yourself strolling through the bustling streets of Bangkok, captivated by the fragrant aromas of Thai street food. The symphony of sweet, sour, salty, and spicy flavors dances on your palate as you savor a spoonful of fragrant curry or a bite of piquant papaya salad.
+
+                        Venture further to the Mediterranean, where sun-kissed ingredients and rustic simplicity reign supreme. Freshly caught seafood, vibrant salads, and hearty breads embody the essence of Mediterranean cuisine, a celebration of fresh, local produce and time-honored traditions.
+                    </p>
+                        <a href="#">Read More</a>
+                </div>
+            </div>
+
+            <!--box 3 ------------>
+            <div class="blog-box">
+                <!--image------------->
+                <div class="blog-img">
+                    <img src="../static/img/pic21.jpg" alt="E.A.T Image 3">
+                </div>
+                <!--text-------------->
+                <div class="blog-text">
+                    <!--<span> October 2023 / Blog Post</span>-->
+                    <a href = "#" class = "blog-title">The Art of Food Presentation: A Feast for the Eyes</a>
+                    <p>
+                        n the culinary world, where taste meets aesthetics, the art of food presentation elevates dining into a visual symphony. Just as a painter carefully arranges colors on a canvas, so too does a chef orchestrate the visual symphony of a dish.
+
+                        Imagine a plate transformed into a canvas, where vibrant colors and artful arrangements captivate the eye. Slices of ruby-red tomatoes dance alongside emerald green herbs, while delicate swirls of sauce add an artistic flourish.
+
+                        The art of food presentation goes beyond mere decoration; it's about enhancing the dining experience, creating a feast for the eyes that complements the symphony of flavors. A thoughtfully presented dish sets the stage for anticipation, piquing curiosity and whetting the appetite.
+                    </p>
+                    <a href="#">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    </body>
+    <footer class="section-p1">
+        <div class="col">
+            E.A.T
+        </div>
+        <div class="col">
+            <h4>Contact</h4>
+            <p><strong>Address:</strong> 143 Bree Street, Cape Town.</p>
+            <p><strong>Phone:</strong> +01 2222 365 </p>
+            <div class="icon">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+            </div>
+        </div>
+        <div class="col">
+            <h4>Operating Hours</h4>
+            <p>Mon - Fri: 11:00am - 10:00pm</p>
+            <p>Sat - Sun: 11:00am - 12:00pm <p>
+        </div>
+        <div class="col">
+            <h4>Join our family</h4>
+            <p>Subscribe to our newsletter for updates and deals</p>
+            <section>
+                <form action="">
+                    <input type="text" name="" id="" placeholder="Email Address">
+                    <button>Subscribe</button>
+                </form>
+            </section>
+        </div>
+
+        <div class="copyright">
+            <p>Copyright &copy;2023 Designed by <span class="designer"></span>Code Buds</p>
+        </div>
+    </footer>
+{% endblock content%}

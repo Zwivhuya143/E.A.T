@@ -1,0 +1,42 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block content %}
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+        <link rel="stylesheet" href="{% static 'css/login.css' %}">
+
+    </head>
+    <div class="bg-img">
+        <div class="content">
+            <header>E.A.T</header>
+            <form method="POST" novalidate>
+                {% csrf_token %}
+                <div class="field">
+                    <span class="fa fa-user"></span>
+                    {{ form.username }}
+                </div>
+                <div class="field space">
+                    <span class="fa fa-envelope"></span>
+                    {{ form.email }}
+                    <span class="show">SHOW</span>
+                </div>
+                <div class="field space">
+                    <span class="fa fa-lock"></span>
+                    {{ form.password1 }}
+                    <span class="show">SHOW</span>
+                </div>
+                <div class="field space">
+                    <span class="fa fa-lock"></span>
+                    {{ form.password2 }}
+                    <span class="show">SHOW</span>
+                </div>
+                <br>
+                <div class="field">
+                    <input type="submit" value="Register Account">
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock content %}
+

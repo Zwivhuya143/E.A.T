@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+{% load static %}
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E.A.T</title>
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+
+</head>
+<body style="background-image: url('../static/img/background.jpg'); background-size: cover; background-repeat: no-repeat;"></body>
+<body>
+<section id="header">
+    <h3 style="color: #ffffff">E.A.T</h3>
+
+    <div>
+        <ul id="navbar">
+            <li><a href="{% url 'menu' %}">Menu</a></li>
+            <li><a href="{% url 'reservations' %}">Reservation</a></li>
+            <li><a href="{% url 'blog' %}">Blog</a></li>
+
+            {% if user.is_authenticated %}
+                <li><a href="{% url 'my_orders' %}">Orders</a></li>
+                <li><a href="{% url 'logout' %}">Logout</a></li>
+            {% else %}
+                <li><a href="{% url 'login' %}">Login</a></li>
+                <li><a href="{% url 'register' %}">Register</a></li>
+            {% endif %}
+            <li id="lg-bag">
+                <a href="{% url 'cart' %}"><i class="far fa-shopping-bag"></i></a>
+            </li>
+
+        </ul>
+    </div>
+    <div id="mobile">
+        <a href="cart.html"><i class="far fa-shopping-bag"></i></a>
+        <i id="bar" class="fas fa-outdent"></i>
+    </div>
+</section>
+    </section>
+    {% if products is not null %}
+    <section id="product1" class="section-p1">
+        <div class="pro-container">
+            {% for product in products %}
+            <div class="pro">
+                <img src="{{product.image}}" alt="" width="300" height="200">
+                <div class="des">
+                    <span>E.A.T</span>
+                    <h5>{{product.name}}</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>R {{product.price}}</h4>
+                </div>
+                <form type="hidden" value="{{product.product_id}}" />
+                <a class="add-to-cart" href="{% url 'add_to_cart' product.product_id %}"><i
+                        class="fal fa-shopping-cart cart"></i></a>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+    {% endif %}
+
+    <!-- {% for product in products%}
+    <li>{{product.name}} {{product.price}}</li>
+    {% endfor %} -->
+    {% block content %}
+    <!-- Content Goes here -->
+    {% endblock %}
+
+
+    <script src={% static "js/script.js" %}> </script>
+</body>
+</html>
